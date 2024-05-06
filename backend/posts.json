@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "title": "Title 1",
+        "content": "This is post 1",
+        "author": "Author 1",
+        "date": "2023-06-08"
+    },
+    {
+        "id": 2,
+        "title": "Title 2 updated",
+        "content": "This is post 2",
+        "author": "John Abc",
+        "date": "2024-06-08"
+    },
+    {
+        "id": 3,
+        "title": "Title 3 - updated",
+        "content": "This is another post -updated",
+        "author": "Thomas Abas -updated",
+        "date": "2023-09-27"
+    },
+    {
+        "id": 4,
+        "title": "My Post",
+        "content": "This is a good post",
+        "author": "Charles",
+        "date": "2024-04-24"
+    },
+    {
+        "id": 5,
+        "title": "Title 5",
+        "content": "This is post 5",
+        "author": "Boddy",
+        "date": "2024-04-29"
+    },
+    {
+        "id": 6,
+        "title": "test",
+        "content": "oihsd\u00e4pfia\u00e4pdfjap\u00e4",
+        "author": "o\u00f6isafoiho\u00f6",
+        "date": "oihao\u00f6sifha\u00f6o"
+    },
+    {
+        "id": 7,
+        "title": "hallo",
+        "content": "\u00f6osi this is many more modjf\u00e4adosjf\u00e4dpfoaja\u00e4p",
+        "author": "stefan",
+        "date": "2024-05-06"
+    }
+]

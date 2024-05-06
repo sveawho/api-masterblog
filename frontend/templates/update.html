@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Post</title>
+    <!-- Include any CSS stylesheets if needed -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+
+    <input type="hidden" id="api-base-url-update" value="http://127.0.0.1:5002/api">
+
+
+
+    <div class="container">
+        <div class="input-field">
+            <a href="/">
+                << Go back</a>
+        </div>
+
+
+        <h1>📚 Update post</h1> <br>
+        <div class="input-field">
+            <input type="text" name="title" id="update-title" placeholder="Enter Post Title">
+            <input type="text" name="author" id="update-author" placeholder="Enter Post Author">
+            <input type="date" name="date" id="update-date" placeholder="Enter Post Date">
+        </div>
+        <div class="input-field">
+            <input type="text" name="content" id="update-content" placeholder="Enter Post Content">
+            <button onclick="updatePost()">Update Post</button>
+        </div>
+    </div>
+
+    <script src="/static/update.js"></script>
+</body>
+
+</html>
