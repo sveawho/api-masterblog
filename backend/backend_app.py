@@ -1,6 +1,7 @@
+import json
 from flask import Flask, jsonify, request, abort
 from flask_cors import CORS
-import json
+
 
 app = Flask(__name__)
 CORS(app)
@@ -11,7 +12,7 @@ POSTS_FILE = "posts.json"
 def load_posts():
     """Load posts from JSON file."""
     try:
-        with open(POSTS_FILE, "r") as file:
+        with open(POSTS_FILE, "r", encoding="utf-8") as file:
             posts = json.load(file)
     except FileNotFoundError:
         posts = []
@@ -34,7 +35,7 @@ def get_posts():
 @app.route('/api/posts', methods=['POST'])
 def add_post():
     """Add a new post."""
-    if not request.json or 'title' not in request.json or not request.json['title'] or 'content' not in request.json or not request.json['content'] or 'author' not in request.json or not request.json['author'] or 'date' not in request.json or not request.json['date']:
+    if not all(key in request.json and request.json[key] for key in ['title', 'content', 'author', 'date']):
         abort(400, 'Missing or empty required fields')
 
     new_post = {
@@ -66,11 +67,11 @@ def update_post(post_id):
     """Update a post by ID."""
     posts = load_posts()
     post = next((post for post in posts if post['id'] == post_id), None)
-    if not post:
+    if post is None:
         abort(404, f"Post with id {post_id} not found")
 
     data = request.json
-    if 'title' in data:
+    if not data.get("title", ""):
         if not data['title']:
             abort(400, 'Title cannot be empty')
         post['title'] = data['title']
